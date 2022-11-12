@@ -1,4 +1,3 @@
-import os
 from queries.get import *
 from queries.post import *
 from tools.text_item import *
@@ -6,7 +5,7 @@ import telebot #Telegram API
 
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-token = os.environ['telegram_token']
+token = queries.environment.telegram_token
 bot = telebot.TeleBot(token)
 
 #client

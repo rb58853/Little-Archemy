@@ -1,9 +1,9 @@
-import os
+import queries.environment
 from urllib.request import urlopen
 import requests
 import json
 
-base_url = os.environ['base_url']
+base_url = queries.environment.base_url
 
 def post_new_item(name:str, parents:str,description:str,id_in:int):
     url = base_url+"items/new/"

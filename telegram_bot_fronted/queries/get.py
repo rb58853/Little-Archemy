@@ -1,7 +1,8 @@
-import os
+import queries.environment
 from urllib.request import urlopen
 import json
-base_url = os.environ['base_url']
+
+base_url = queries.environment.base_url
 
 def get_all_items():
     url = base_url + "items/all"
