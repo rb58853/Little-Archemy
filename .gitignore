@@ -1,4 +1,3 @@
 .env
 **/__pycache__/
-little_archemy_backend/db.sqlite3
 telegram_bot_fronted/queries/environment.py
