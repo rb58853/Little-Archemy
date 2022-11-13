@@ -1,8 +1,8 @@
-import queries.environment
+import telegram_bot_fronted.queries.environment
 from urllib.request import urlopen
 import json
 
-base_url = queries.environment.base_url
+base_url = telegram_bot_fronted.queries.environment.base_url
 
 def get_all_items():
     url = base_url + "items/all"

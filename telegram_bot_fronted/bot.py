@@ -1,11 +1,11 @@
-from queries.get import *
-from queries.post import *
-from tools.text_item import *
+from telegram_bot_fronted.queries.get import *
+from telegram_bot_fronted.queries.post import *
+from telegram_bot_fronted.tools.text_item import *
 import telebot #Telegram API
 
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-token = queries.environment.telegram_token
+token = telegram_bot_fronted.queries.environment.telegram_token
 bot = telebot.TeleBot(token)
 
 #client

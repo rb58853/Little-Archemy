@@ -1,4 +1,4 @@
-from tools.split_full_spaces import split_spaces_and_jump
+from telegram_bot_fronted.tools.split_full_spaces import split_spaces_and_jump
 
 def decoder(chain:str):
     array = split_spaces_and_jump(chain)

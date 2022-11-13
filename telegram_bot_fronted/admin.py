@@ -1,4 +1,4 @@
-from bot import *
+from telegram_bot_fronted.bot import *
 
 @bot.message_handler(commands = ["list"])
 def mirror_list (message):

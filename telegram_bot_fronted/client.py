@@ -1,6 +1,6 @@
 from asyncio.windows_events import NULL
-from admin import *
-from tools.parse_new_item import decoder
+from telegram_bot_fronted.admin import *
+from telegram_bot_fronted.tools.parse_new_item import decoder
 
 
 @bot.message_handler(commands = ["new_item"])

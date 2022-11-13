@@ -1,5 +1,5 @@
-from client import *
-from tools.leaderboard_tools import *
+from telegram_bot_fronted.client import *
+from telegram_bot_fronted.tools.leaderboard_tools import *
 
 @bot.callback_query_handler(func = lambda x: True)
 def items_aprovation_call(call):
