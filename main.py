@@ -1,4 +1,4 @@
-import threading
+#import threading
 import telegram_bot_fronted.main
 import os
 
@@ -11,6 +11,6 @@ def start ():
     # thread = threading.Thread(name = "runserver django",target = runserver)
     # thread.start()
     # print("Django Server is run")
-    telegram_bot_fronted.main.start()
+    telegram_bot_fronted.main.recive_message()
 
 start()
