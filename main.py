@@ -3,9 +3,9 @@ import telegram_bot_fronted.main
 import os
 
 def runserver():
-    path = os.getcwd() + "\little_archemy_backend"
+    path = os.getcwd() + "/little_archemy_backend"
     os.chdir(path)
-    os.system("py manage.py runserver")
+    os.system("python manage.py runserver")
 
 def start ():
     thread = threading.Thread(name = "runserver django",target = runserver)
