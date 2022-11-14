@@ -4,7 +4,7 @@ def recive_message():
     bot.infinity_polling()
 
 def start():
-    print ("Inicio Correcto del bot")
+    print ("Bot Server is run")
     thread = threading.Thread(name = "hilo",target = recive_message)
     thread.start()
     # print ("El bot se esta ejecutando en otro Hilo")
