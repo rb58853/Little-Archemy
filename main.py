@@ -1,18 +1,20 @@
-import threading
-import little_archemy_backend.manage
 import telegram_bot_fronted.main
+import asyncio
 import os
 
-
-def runserver():
+async def django_excute():
     path = os.getcwd() + "\little_archemy_backend"
     os.chdir(path)
     os.system("py manage.py runserver")
+    pass
 
-def start ():
-    thread = threading.Thread(name = "runserver django",target = runserver)
-    thread.start()
-    print("Django Server is run")
-    telegram_bot_fronted.main.start()
+async def bot_execute():
+    telegram_bot_fronted.main.recive_message
+    pass
 
-start()
+
+async def dual_execute():
+    await asyncio.gather(django_excute(),bot_execute())
+
+       
+asyncio.run(dual_execute())
