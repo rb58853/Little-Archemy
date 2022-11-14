@@ -114,4 +114,4 @@ class SeeItems():
         for item in items:
             if item['id'] == int(item_id):
                 return item
-        return NULL        
+        return None
