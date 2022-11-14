@@ -7,7 +7,7 @@ def runserver():
     os.chdir(path)
     os.system("python manage.py runserver")
 
-#run bot 
+#run bot  
 def start ():
     # thread = threading.Thread(name = "runserver django",target = runserver)
     # thread.start()
