@@ -1,5 +1,5 @@
 import threading
-from telegram_bot_fronted.client_admin import *
+from telegram_bot_fronted.client_admin import bot
 def recive_message():
     bot.infinity_polling()
 
