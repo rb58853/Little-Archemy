@@ -17,8 +17,9 @@ def create_basic (message):
         for i in range(1,len(data_text)-1):
             name += data_text[i]+" "
         name += data_text[len(data_text)-1]
+        bot.send_message(id,name,parse_mode="html")
         reply = post_create_basic(name)
-
+        
         bot.send_message(id,reply,parse_mode="html")
     else:
         error = "<i>Debe indicar un nombre para el nuevo Item, ejemplo: </i><code>/create_basic item_name</code> "
