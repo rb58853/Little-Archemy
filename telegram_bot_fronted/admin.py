@@ -16,7 +16,7 @@ def create_basic (message):
         name = ""
         for i in range(1,len(data_text)-1):
             name += data_text[i]+" "
-        name += data_text[len(data_text)]
+        name += data_text[len(data_text)-1]
         reply = post_create_basic(name)
 
         bot.send_message(id,reply,parse_mode="html")
