@@ -38,6 +38,6 @@ def post_set_admin(username):
     return json.loads(response.read())
 
 def post_create_basic(name):
-    url = base_url+"users/set_admin/?name="+name
+    url = base_url+"items/new_basic/?name="+name
     response = urlopen(url)
     return json.loads(response.read())
