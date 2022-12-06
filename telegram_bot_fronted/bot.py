@@ -17,6 +17,7 @@ about_text = "⦿ /about informacion sobre el bot\n"
 leader_text = "⦿ /leaderboard Muestra la tabla de posiciones segun los creditos.\n"
 
 #admin
+create_basic_text = "⦿ /create_basic crea un nuevo item basico.\n"
 list_item = "⦿ /list Muestra la lista de items propuestos por los estudiantes para asi aceptarlos o rechazarlos.\n"
 set_admin_text = "⦿ /set_admin Convierte un usuario en administrador. Se le pasa como argumento el @username del usuario.\n"
 
@@ -31,6 +32,7 @@ def help (message):
     help_text += leader_text
     help_text += new_item
     help_text += "\n<b>Lista de comandos[admins]:</b>\n" 
+    help_text += create_basic_text
     help_text += list_item
     help_text += set_admin_text
     bot.send_message(id, help_text, parse_mode="html")

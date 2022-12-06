@@ -1,4 +1,28 @@
+from importlib.abc import PathEntryFinder
 from telegram_bot_fronted.bot import *
+
+
+@bot.message_handler(commands = ["create_basic"])
+def create_basic (message):
+    id = message.chat.id
+    data_text = message.text.split()
+    
+    admin = get_data_from_user(message.chat.id)['admin']
+    if admin == False:
+        bot.send_message(id, "Este comando solo lo pueden utilizar los administradores")
+        return
+    
+    if len(data_text) >= 2:
+        name = ""
+        for i in range(1,len(data_text)-1):
+            name += data_text(i)+" "
+        name += data_text(len(data_text))
+        bot.send_message(id, post_create_basic(name),parse_mode="html")
+    else:
+        error = "<i>Debe indicar un nombre para el nuevo Item, ejemplo: </i><code>/create_basic item_name</code> "
+        bot.send_message(id,error,parse_mode="html")
+        return
+        
 
 @bot.message_handler(commands = ["list"])
 def mirror_list (message):
