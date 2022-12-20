@@ -11,7 +11,7 @@ def send_message (message):
     
     users = get_all_users()
     for user in  users:
-        users_id = (user['id'])
+        users_id = user['id']
         bot.send_message(users_id,data_text[1],parse_mode="html")
         
         
