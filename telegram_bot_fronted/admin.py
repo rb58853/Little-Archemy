@@ -11,11 +11,14 @@ def send_message (message):
     if(len(data_text) == 1): 
         bot.send_message(id,"Entre en mensaje no vacio",parse_mode="html")
         return
+    reply = ""
+    for i in range(1,len(data_text)):
+        reply += data_text[i]
     
     users = get_all_users()
     for user in  users:
         users_id = user['id']
-        bot.send_message(users_id,data_text[1],parse_mode="html")
+        bot.send_message(users_id,reply,parse_mode="html")
         
         
 @bot.message_handler(commands = ["create_basic"])
