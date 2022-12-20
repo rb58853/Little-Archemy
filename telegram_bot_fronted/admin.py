@@ -108,10 +108,10 @@ class ItemsAprovation:
     def item_buttons(self,message_id, item):
         item_id = item['id']
         markup = InlineKeyboardMarkup()
-        credits1 = InlineKeyboardButton("Accept: 5000 credits" ,callback_data="admin ok 5000 "  + str(item_id))
-        credits2 = InlineKeyboardButton("Accept: 10000 credits",callback_data="admin ok 10000 " + str(item_id))
-        credits3 = InlineKeyboardButton("Accept: 20000 credits",callback_data="admin ok 20000 " + str(item_id))
-        credits4 = InlineKeyboardButton("Accept: 50000 credits",callback_data="admin ok 50000 " + str(item_id))
+        credits1 = InlineKeyboardButton("Accept: 10 000 credits" ,callback_data="admin ok 20000 "  + str(item_id))
+        credits2 = InlineKeyboardButton("Accept: 500 00 credits",callback_data="admin ok 50000 " + str(item_id))
+        credits3 = InlineKeyboardButton("Accept: 100 000 credits",callback_data="admin ok 100000 " + str(item_id))
+        credits4 = InlineKeyboardButton("Accept: 200 000 credits",callback_data="admin ok 200000 " + str(item_id))
         credits5 = InlineKeyboardButton("Accept: [enter] credits",callback_data="admin ok enter " + str(item_id))
 
         decline1 = InlineKeyboardButton("Decline: "+ItemsAprovation.r1,callback_data="admin no " + ItemsAprovation.reason1+" " + str(item_id))
