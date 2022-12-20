@@ -1,7 +1,20 @@
 from importlib.abc import PathEntryFinder
 from telegram_bot_fronted.bot import *
 
-
+@bot.message_handler(commands = ["message"])
+def send_message (message):
+    id = message.chat.id
+    data_text = message.text.split()
+    if(len(data_text) == 1): 
+        bot.send_message(id,"Entre en mensaje no vacio",parse_mode="html")
+        return
+    
+    users = get_all_users()
+    for user in  users:
+        users_id = (user['id'])
+        bot.send_message(users_id,data_text[1],parse_mode="html")
+        
+        
 @bot.message_handler(commands = ["create_basic"])
 def create_basic (message):
     id = message.chat.id
