@@ -4,6 +4,9 @@ from telegram_bot_fronted.bot import *
 @bot.message_handler(commands = ["message"])
 def send_message (message):
     id = message.chat.id
+    admin = get_data_from_user(message.chat.id)['admin']
+    if(admin == False):
+        return
     data_text = message.text.split()
     if(len(data_text) == 1): 
         bot.send_message(id,"Entre en mensaje no vacio",parse_mode="html")
