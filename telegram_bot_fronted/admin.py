@@ -13,7 +13,7 @@ def send_message (message):
         return
     reply = ""
     for i in range(1,len(data_text)):
-        reply += data_text[i]
+        reply += data_text[i] + " "
     
     users = get_all_users()
     for user in  users:
