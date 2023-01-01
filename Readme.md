@@ -2,4 +2,4 @@ Fronted en Telegarm usando la API Telebot(se instala asi), para correr el bot ej
 
 backend en django.
 
-Para usar el codigo debe definirse un enviroment, en caso de windows local importar la libreria `os` para llamar a la misma local os.environ['label'].
+Para usar el codigo debe definirse un enviroment, en caso de windows local importar la libreria `os`  para llamar. a la misma local os.environ['label'].
